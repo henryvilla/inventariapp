@@ -1,1 +1,1 @@
-code background antiguo  D2D6DE
+code background antiguo  D2D6DE  -z
