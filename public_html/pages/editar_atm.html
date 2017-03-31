@@ -154,7 +154,7 @@
             </header>
 
             <!-- Left side column. contains the logo and sidebar -->
-           <aside class="main-sidebar">
+          <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -193,7 +193,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
+                                 <li><a href="inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
                                 <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ATM</a></li>
                             </ul>
                         </li>
@@ -209,150 +209,218 @@
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        <u><b>Creación de Requerimientos</b></u>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
-                        <li class="active">Requerimientos</li>
-                    </ol>
-                </section>
+                 <section class="content">
+		<div class="row">
+		
+        <div class="col-md-3">
 
-                <!-- Main content -->
-                <section class="content">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="box">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title"><u>Nuevo Requerimiento</u></h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Id_Requerimiento :</font></label></div>
-                                        <div class="col-md-2"><input class="form-control" type="text" placeholder="Automatico"></div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Tipo Producto :</font></label></div>
-                                        <div class="col-md-2">
-                                            <select class="form-control select2"  data-placeholder="Seleccione" style="width: 100%;">
-                                                <option>ATM</option>
-                                                <option>KIO</option>
-                                                <option>MON</option>
-                                                <option>PLUS</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">fecha :</font></label></div>
-                                        <div class="col-md-2 ">
-                                            <div class="input-group">
-                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                                            </div>
-                                        </div>
-                                    </div>
+          <!-- Profile Image -->
+          <div class="box box-primary">
+            <div class="box-body box-profile">
+			<div id="load_img">
+              <img class=" img-responsive" src="../imagenes/atm_1500.png" alt="Bussines profile picture">
+			  </div>
 
-                                    <br>
+              <h3 class="profile-username text-center">Pro Cash 1500 XE</h3>
 
-                                    <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Tipo de Requerimiento :</font></label></div>
-                                        <div class="col-md-4">
-                                            <select class="form-control select2"  style="width: 100%;">
-                                                <option value="" disabled selected>Seleccione el Requerimiento</option>
-                                                <option>Nueva Instalación</option>
-                                                <option>Recambio</option>
-                                                <option>Retiro temporal</option>
-                                                <option>Retiro definitivo</option>
-                                                <option>Reubicacion</option>
-                                                <option>Migración</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Estado del Requerimiento :</font></label></div>
-                                        <div class="col-md-4">
-                                            <select class="form-control select2"  style="width: 100%;">
-                                                <option value="" disabled selected>Seleccione el Estado</option>
-                                                <option>No Iniciado</option>
-                                                <option>No Aplica</option>
-                                                <option>En Proceso</option>
-                                                <option>Finalizado</option>
-                                            </select>
-                                        </div>
-                                    </div>
+              
 
-                                    <br>
+              
 
-                                    <div class="row">
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2"  style="width: 100%;">
-                                                    <option value="" disabled selected>Seleccione el Requerimiento</option>
-                                                    <option>Nueva Instalación</option>
-                                                    <option>Recambio</option>
-                                                    <option>Retiro temporal</option>
-                                                    <option>Retiro definitivo</option>
-                                                    <option>Reubicacion</option>
-                                                    <option>Migración</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                        </div>
+          
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+			<form name="update_register" id="update_register" class="form-horizontal" method="post" enctype="multipart/form-data">
+				
+			
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#details" data-toggle="tab" aria-expanded="false">General</a></li>
+              <li class=""><a href="#address" data-toggle="tab" aria-expanded="false">Precios & Stock</a></li>
+			  
+            </ul>
+            <div class="tab-content">
+              <div id="resultados_ajax"></div>
+           
+             
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                                    <option>Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option>California</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                        </div>
-                                    </div>
+              <div class="tab-pane active" id="details">
+              
+                  <div class="form-group ">
+                    <label for="product_code" class="col-sm-2 control-label">PSE</label>
 
-                                </div>
-                                <!-- ./box-body -->
-
-                            </div>
-                            <!-- /.box -->
-                        </div>
-                        <!-- /.col -->
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="product_code" name="product_code"  value="I0001013" required>
+					  <input type="hidden"  id="product_id" name="product_id"  value="30" >
+					   
                     </div>
-                    <!-- /.row -->
+                  </div>
+				  <div class="form-group">
+                    <label for="model" class="col-sm-2 control-label">Descripción</label>
 
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="model" name="model" value="HIEJSmk" >
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label for="product_name" class="col-sm-2 control-label">Marca</label>
 
-                </section>
-                <!-- /.content -->
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="product_name" name="product_name" value="Hp 54" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="note" class="col-sm-2 control-label">Modelo</label>
+                    <div class="col-sm-6">
+						<textarea class="form-control" name="note" id="note">9de octubre</textarea>
+                    </div>
+                  </div>
+                  
+                    <div class="form-group">
+                    <label for="product_name" class="col-sm-2 control-label">Serie</label>
+
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="product_name" name="product_name" required >
+                    </div>
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="product_name" class="col-sm-2 control-label">Dirección</label>
+
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="product_name" name="product_name" required >
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="note" class="col-sm-2 control-label">Observaciones</label>
+                    <div class="col-sm-6">
+						<textarea class="form-control" name="note" id="note"></textarea>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="manufacturer_id" class="col-sm-2 control-label">Tipo</label>
+
+                    <div class="col-sm-6">
+                      <select class="form-control select2">
+						
+													<option value="1">ATM</option>
+														<option value="3">KIO</option>
+														<option value="2">MON</option>
+														<option value="4">PLUS</option>
+												  </select>
+                    </div>
+                  </div>
+                  
+                  
+                  
+				 <div class="form-group">
+					<label for="status" class="col-sm-2 control-label">Estado</label>
+                    <div class="col-sm-6">
+                      
+                    <select class="form-control select2">
+                    <option value="1">Producción</option>
+					<option value="2">Usado</option>
+					<option value="3">Nuevo</option>
+					<option value="4">Inutilizable</option>
+					<option value="5">Baja</option>
+                    </select>
+                    </div>
+						
+						
+                    </div>
+                  
+				  
+				  
+                  <div class="form-group">
+                    <label for="image" class="col-sm-2 control-label">Imagen</label>
+
+                    <div class="col-sm-6">
+                      <input type="file" name="imagefile" id="imagefile" onchange="upload_image(30);">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-6">
+                      <button type="submit" class="btn btn-primary actualizar_datos">Guardar datos</button>
+                    </div>
+                  </div>
+               
+              </div>
+              <!-- /.tab-pane -->
+			   <div class="tab-pane" id="address">
+                
+                  <div class="form-group">
+                    <label for="buying_price" class="col-sm-2 control-label">Precio de compra</label>
+
+                    <div class="col-sm-6">
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<i class="fa fa-usd"></i>
+						  </div>
+						  <input type="text" class="form-control" id="buying_price" name="buying_price" value="1" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
+						</div>
+                    </div>
+                  </div>
+				  <div class="form-group">
+                    <label for="selling_price" class="col-sm-2 control-label">Precio de venta</label>
+
+                    <div class="col-sm-6">
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<i class="fa fa-usd"></i>
+						  </div>
+						  <input type="text" class="form-control" id="selling_price" name="selling_price" value="2" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
+						</div>
+                    </div>
+                  </div>
+				  
+				  <div class="form-group">
+                    <label for="stock" class="col-sm-2 control-label">Stock</label>
+
+                    <div class="col-sm-6">
+						<div class="input-group">
+						  <div class="input-group-addon">
+							<i class="fa fa-shopping-cart"></i>
+						  </div>
+						  <input type="text" class="form-control" id="stock" name="stock" value="996.00">
+						</div>
+                    </div>
+                  </div>
+                 
+                  
+                  
+				  
+				  
+                  
+                  
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-6">
+                      <button type="submit" class="btn btn-primary actualizar_datos" >Guardar datos</button>
+                    </div>
+                  </div>
+                
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- /.nav-tabs-custom -->
+		  </form>
+        </div>
+        <!-- /.col -->
+      </div>
+     
+        </section><!-- /.content -->
+             
 
             </div>
             <!-- FIN CONTENIDO -->

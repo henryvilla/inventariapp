@@ -36,6 +36,8 @@
 
 
     </head>
+    
+    
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper"> 
 
@@ -154,7 +156,7 @@
             </header>
 
             <!-- Left side column. contains the logo and sidebar -->
-           <aside class="main-sidebar">
+            <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -185,7 +187,7 @@
                             </ul>
                         </li>
                         
-                        <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
+                        <li class="treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
                             <a href="#">
                                 <i class="fa fa-archive"></i> <span>Inventario</span>
                                 <span class="pull-right-container">
@@ -193,7 +195,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
+                               <li><a href="inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
                                 <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ATM</a></li>
                             </ul>
                         </li>
@@ -210,151 +212,139 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>
-                        <u><b>Creación de Requerimientos</b></u>
-                    </h1>
+                    <!--h1>
+                        <u><b>Listado de Atm's</b></u>
+                    </h1-->
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
-                        <li class="active">Requerimientos</li>
+                        <li class="active">Inventario</li>
                     </ol>
+                    
+                    <!-- seccion de buscar, nuevo y mostrar -->
+                  <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Buscar por nombre" id='q' onkeyup="load(1);">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button" onclick='load(1);'><i class='fa fa-search'></i></button>
+                                            </span>
+                                        </div> 
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                    <div class="col-xs-1">
+                                        <div id="loader" class="text-center"></div>
+                                    </div>
+                                    
+                                    <div class="col-xs-5 ">
+                                        <div class="btn-group pull-right">
+                                            <a href="agregar_atm.html" class="btn btn-default"><i class='fa fa-plus'></i> Nuevo</a>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Mostrar
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li class='active' onclick='per_page(15);' id='15'><a href="#">15</a></li>
+                                                <li onclick='per_page(25);' id='25'><a href="#">25</a></li>
+                                                <li onclick='per_page(50);' id='50'><a href="#">50</a></li>
+                                                <li onclick='per_page(100);' id='100'><a href="#">100</a></li>
+                                                <li onclick='per_page(1000000);' id='1000000'><a href="#">Todos</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <input type='hidden' id='per_page' value='15'>
+                                </div>     
+                    
+                      <!--fin de la 1era seccion -->
                 </section>
 
                 <!-- Main content -->
+                 <!--tabla producots-->
                 <section class="content">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="box">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title"><u>Nuevo Requerimiento</u></h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Id_Requerimiento :</font></label></div>
-                                        <div class="col-md-2"><input class="form-control" type="text" placeholder="Automatico"></div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Tipo Producto :</font></label></div>
-                                        <div class="col-md-2">
-                                            <select class="form-control select2"  data-placeholder="Seleccione" style="width: 100%;">
-                                                <option>ATM</option>
-                                                <option>KIO</option>
-                                                <option>MON</option>
-                                                <option>PLUS</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">fecha :</font></label></div>
-                                        <div class="col-md-2 ">
-                                            <div class="input-group">
-                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                                            </div>
-                                        </div>
-                                    </div>
+                     <div class="col-md-12">
+                         <div class="box" >
+    <div class="box-header with-border">
+                            <h3 class="box-title">Listado de Atms</h3>
+    </div>
+   <div class="box-body">
+                     <div class="table-responsive">
+                         <table class="table table-condensed table-hover table-striped ">
+                             <tbody><tr>
+                                     <th class="text-center">PSE</th>
+                                     <th class="text-center">Descripción</th>
+                                     <th>Marca </th>
+                                     <th>Modelo</th>
+                                     <th>Serie </th>
+                                     <th>Dirección</th>
+                                     <!--th>Distrito</th>
+                                     <th>Provincia</th>
+                                     <th>Departamento</th>
+                                     <th>Locación</th>
+                                     <th>OffPremise</th-->
+                                     <th>Observación</th>
+                                      <th>Tipo</th>
+                                     <th>Estado</th>
+                                     <th>Stock</th>
+                                     <th>Precio</th>
+                                     <th></th>
+                                 </tr>
+                                 <tr>
+                                    <td class="text-center">I0001013</td>
+                                     <td class="text-cente"> Locutorio Tele
+                                     </td>
+                                     <td class="text-left">Wincor Nixdorf</td>
+                                     <td>Pro Cash 1500</td>
+                                     <td>5300272199</td>
+                                     <td class="text-left">
+                                         Av. Franciso Moreno245</td>
+                                     <!--td class="text-center">Surquillo</td>
+                                     <td class="text-right">Lima</td>
+                                     <td class="text-right">Lima</td>
+                                     <td class="text-left">Punto Neutro</td>
+                                      <td class="text-left">Locutorios</td-->
+                                     <td class="text-left">Ni idea</td>
+                                     <td class="text-left">ATM</td>
+                                     <td> <font color="red">5.Baja</font></td>
+                                     <td class="text-left">10</td>
+                                     <td class="text-left">1500.00</td>
+                                      <td>
+                                         <div class="btn-group pull-right">
+                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Acciones <span class="fa fa-caret-down"></span></button>
+                                             <ul class="dropdown-menu">
+                                                 <li><a href="editar_atm.html"><i class="fa fa-edit"></i> Editar</a></li>
+                                                 <li><a href="#" onclick="eliminar('10')"><i class="fa fa-trash"></i> Borrar</a></li>
+                                             </ul>
+                                         </div> 
+                                     </td>
+                                     
+                                     
+                                               
+                                 </tr>
+                                                            
+                             </tbody></table>
+                     </div><!--fin_tabla-->
+   </div><!--fin_class_body-->
 
-                                    <br>
-
-                                    <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Tipo de Requerimiento :</font></label></div>
-                                        <div class="col-md-4">
-                                            <select class="form-control select2"  style="width: 100%;">
-                                                <option value="" disabled selected>Seleccione el Requerimiento</option>
-                                                <option>Nueva Instalación</option>
-                                                <option>Recambio</option>
-                                                <option>Retiro temporal</option>
-                                                <option>Retiro definitivo</option>
-                                                <option>Reubicacion</option>
-                                                <option>Migración</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Estado del Requerimiento :</font></label></div>
-                                        <div class="col-md-4">
-                                            <select class="form-control select2"  style="width: 100%;">
-                                                <option value="" disabled selected>Seleccione el Estado</option>
-                                                <option>No Iniciado</option>
-                                                <option>No Aplica</option>
-                                                <option>En Proceso</option>
-                                                <option>Finalizado</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2"  style="width: 100%;">
-                                                    <option value="" disabled selected>Seleccione el Requerimiento</option>
-                                                    <option>Nueva Instalación</option>
-                                                    <option>Recambio</option>
-                                                    <option>Retiro temporal</option>
-                                                    <option>Retiro definitivo</option>
-                                                    <option>Reubicacion</option>
-                                                    <option>Migración</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                                    <option>Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option>California</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- ./box-body -->
-
-                            </div>
-                            <!-- /.box -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
+   <div class="box-footer clearfix">
+Mostrando 1 al 10 de 10 registros<ul class="pagination pagination-sm no-margin pull-right"><li class="disabled"><span><a>‹ Anterior</a></span></li><li class="active"><a>1</a></li><li class="disabled"><span><a>Siguiente ›</a></span></li></ul>
+</div>
+                        </div><!-- finclass_box-->
+                        
+                    </div><!-- /.col -->
+                    
+</div><!-- /.row -->
 
                 </section>
                 <!-- /.content -->
 
             </div>
+            
+            
+          
+            
+            
+            
             <!-- FIN CONTENIDO -->
 
             <footer class="main-footer">
@@ -365,6 +355,9 @@
             </footer>
 
         </div>
+            
+            
+            
         <!-- ./wrapper -->
 
         <!-- jQuery 2.2.3 -->
