@@ -4,3 +4,18 @@
         background-color: #00A94E !important;
 }
 
+.share-pdf{
+    background-color: #d34836;
+        display: block;
+    margin-bottom: 5px;
+    padding: 7px;
+    color: #fff;
+}
+
+.share-xls{
+    background-color: #00A94E;
+        display: block;
+    margin-bottom: 5px;
+    padding: 7px;
+    color: #fff;
+}

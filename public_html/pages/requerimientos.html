@@ -154,7 +154,7 @@
             </header>
 
             <!-- Left side column. contains the logo and sidebar -->
-           <aside class="main-sidebar">
+            <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -171,8 +171,8 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="header">MENU PRINCIPAL</li>
-                        
-                           <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
+
+                        <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
                             <a href="#">
                                 <i class="fa fa-newspaper-o"></i> <span>Requerimientos</span>
                                 <span class="pull-right-container">
@@ -184,7 +184,7 @@
                                 <li class="active"><a href="requerimientos.html"><i class="fa fa-circle-o"></i>Creación de Requerimientos</a></li>
                             </ul>
                         </li>
-                        
+
                         <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
                             <a href="#">
                                 <i class="fa fa-archive"></i> <span>Inventario</span>
@@ -198,7 +198,7 @@
                             </ul>
                         </li>
                     </ul>
-                   
+
                 </section>
                 <!-- /.sidebar -->
             </aside>
@@ -225,15 +225,20 @@
                         <div class="col-md-12">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title"><u>Nuevo Requerimiento</u></h3>
+                                    <h3 class="box-title"><i class='fa fa-edit'><u>Nuevo Requerimiento</u></i></h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
+
                                     <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Id_Requerimiento :</font></label></div>
-                                        <div class="col-md-2"><input class="form-control" type="text" placeholder="Automatico"></div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">Tipo Producto :</font></label></div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label><font color="red">Id_Requerimiento :</font></label>
+                                                <input class="form-control" type="text" placeholder="Automatico">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label><font color="red">Tipo Producto :</font></label>
                                             <select class="form-control select2"  data-placeholder="Seleccione" style="width: 100%;">
                                                 <option>ATM</option>
                                                 <option>KIO</option>
@@ -241,20 +246,8 @@
                                                 <option>PLUS</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-2" ALIGN=right><label><font COLOR="red">fecha :</font></label></div>
-                                        <div class="col-md-2 ">
-                                            <div class="input-group">
-                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="row">
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Tipo de Requerimiento :</font></label></div>
                                         <div class="col-md-4">
+                                            <label><font color="red">Tipo de Requerimiento :</font></label>
                                             <select class="form-control select2"  style="width: 100%;">
                                                 <option value="" disabled selected>Seleccione el Requerimiento</option>
                                                 <option>Nueva Instalación</option>
@@ -265,8 +258,17 @@
                                                 <option>Migración</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-2" ALIGN=right><label><FONT COLOR="olive">Estado del Requerimiento :</font></label></div>
-                                        <div class="col-md-4">
+                                    </div>
+
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label><font color="blue">ID_del ATM :  </font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Estado del Requerimiento :</font></label>
                                             <select class="form-control select2"  style="width: 100%;">
                                                 <option value="" disabled selected>Seleccione el Estado</option>
                                                 <option>No Iniciado</option>
@@ -275,68 +277,161 @@
                                                 <option>Finalizado</option>
                                             </select>
                                         </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Responsable :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Fecha :</font></label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <br>
 
                                     <div class="row">
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2"  style="width: 100%;">
-                                                    <option value="" disabled selected>Seleccione el Requerimiento</option>
-                                                    <option>Nueva Instalación</option>
-                                                    <option>Recambio</option>
-                                                    <option>Retiro temporal</option>
-                                                    <option>Retiro definitivo</option>
-                                                    <option>Reubicacion</option>
-                                                    <option>Migración</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Proyecto :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Grupo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Periodo Programado :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="blue">Proveedor :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+                                    <br>
 
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label><font color="black">Departamento :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Provincia :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Distrito :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
                                         <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Tipo de Requerimiento</label>
-                                                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                                    <option>Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option>California</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
-                                            <div class="form-group">
-                                                <label>Disabled Result</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
-                                                    <option>Alaska</option>
-                                                    <option disabled="disabled">California (disabled)</option>
-                                                    <option>Delaware</option>
-                                                    <option>Tennessee</option>
-                                                    <option>Texas</option>
-                                                    <option>Washington</option>
-                                                </select>
-                                            </div>
-                                            <!-- /.form-group -->
+                                            <label><font color="black">Dirección :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label><font color="black">Locación :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Locación :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="black">Contacto :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Telf_Contacto :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="black">Email_ Conctacto :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label><font color="black">Marca Antigua :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Modelo Antiguo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Serie Antiguo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Marca Nueva :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Modelo Nuevo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Serie Nueva :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <label><font color="black">Mueble Nuevo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label><font color="black">Denominaciones Nuevo :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+
+                                        <div class="col-md-2">
+                                            <label><font color="black">Ip Local ATM :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Máscara :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">IP GW :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">IP Tandem :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">Puerto :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="black">IP local Alarmas :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Descripción :</label>
+                                            <textarea class="form-control" rows="5" placeholder="Ingrese la Descripción aqui."></textarea>
                                         </div>
                                     </div>
 
