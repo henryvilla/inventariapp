@@ -33,7 +33,12 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+		
+		<link rel="icon" href="../imagenes/icon.png">
+        <link rel="shortcut icon" href="../imagenes/icon.png">
 
+        <!-- Marcador en escritorio de Iphone-->
+        <link rel="apple-touch-icon" href="../imagenes/icon.png">
 
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
@@ -180,8 +185,8 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="index.html"><i class="fa fa-circle-o"></i>Revision de Requerimientos</a></li>
-                                <li class="active"><a href="requerimientos.html"><i class="fa fa-circle-o"></i>Creación de Requerimientos</a></li>
+                                <li><a href="reportes_req.html"><i class="fa fa-circle-o"></i>Consulta</a></li>
+                                <li class="active"><a href="requerimientos.html"><i class="fa fa-circle-o"></i>Nuevo REQ</a></li>
                             </ul>
                         </li>
 
@@ -193,8 +198,20 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
+                                <li><a href="reportes_inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
                                 <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ATM</a></li>
+                            </ul>
+                        </li>
+                           <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
+                            <a href="#">
+                                <i class="fa fa fa-signal"></i> <span>Reportes</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a href="requerimientos.html"><i class="fa fa-bar-chart"></i>Report_barra</a></li>
+                                 <li class="active"><a href="requerimientos.html"><i class="fa fa-pie-chart"></i>Report_char</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -210,9 +227,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>
-                        <u><b>Creación de Requerimientos</b></u>
-                    </h1>
+                    <h1 class="box-title"><i class='fa fa-edit'><u> Nuevo Requerimiento</u></i></h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
                         <li class="active">Requerimientos</li>
@@ -224,13 +239,15 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="box">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title"><i class='fa fa-edit'><u>Nuevo Requerimiento</u></i></h3>
-                                </div>
+                                <!--  <div class="box-header with-border">
+                                    <h1 class="box-title"><i class='fa fa-edit'><u> Nuevo Requerimiento</u></i></h1>
+                                </div> 
                                 <!-- /.box-header -->
                                 <div class="box-body">
-
+								
+									<h5><font color="red"><u>SOBRE EL REQUERIMIENTO</u></font></h5>
                                     <div class="row">
+									
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label><font color="red">Id_Requerimiento :</font></label>
@@ -259,9 +276,10 @@
                                             </select>
                                         </div>
                                     </div>
-
+								
                                     <br>
-
+									<h5><font color="blue"><u>RESPONSABILIDAD DEL REQUERIMIENTO</u></font></h5>
+									
                                     <div class="row">
                                         <div class="col-md-3">
                                             <label><font color="blue">ID_del ATM :  </font></label>
@@ -311,88 +329,76 @@
                                         </div>
                                     </div>
                                     <br>
-
+									<h5><font color="DarkOliveGreen"><u>SOBRE EL CONTACTO Y EL LUGAR</u></font></h5>
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <label><font color="black">Departamento :</font></label>
+                                            <label><font color="DarkOliveGreen">Departamento :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Provincia :</font></label>
+                                            <label><font color="DarkOliveGreen">Provincia :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Distrito :</font></label>
+                                            <label><font color="DarkOliveGreen">Distrito :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-6">
-                                            <label><font color="black">Dirección :</font></label>
+                                            <label><font color="DarkOliveGreen">Dirección :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
                                     <br>
 
                                     <div class="row">
-<<<<<<< HEAD
                                         <div class="col-md-2">
-                                            <label><font color="black">Locación :</font></label>
+                                            <label><font color="DarkOliveGreen">Locación :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-=======
-                                        <div class="col-md-3">
->>>>>>> origin/master
-                                            <label><font color="black">Locación :</font></label>
+                                            <label><font color="DarkOliveGreen">Zona :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-3">
-                                            <label><font color="black">Contacto :</font></label>
+                                            <label><font color="DarkOliveGreen">Contacto :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-md-2">
-=======
-                                        <div class="col-md-3">
->>>>>>> origin/master
-                                            <label><font color="black">Telf_Contacto :</font></label>
+                                            <label><font color="DarkOliveGreen">Telf_Contacto :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-3">
-                                            <label><font color="black">Email_ Conctacto :</font></label>
+                                            <label><font color="DarkOliveGreen">Email_ Conctacto :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
-<<<<<<< HEAD
 
-=======
+                                    <br> 
+									<h5><font color="DarkSlateGrey"><u>DATOS PARA EL REQUERIMIENTO</u></font></h5>
                                     
->>>>>>> origin/master
-                                    <br>
-
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <label><font color="black">Marca Antigua :</font></label>
+                                            <label><font color="DarkSlateGrey">Marca Antigua :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Modelo Antiguo :</font></label>
+                                            <label><font color="DarkSlateGrey">Modelo Antiguo :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Serie Antiguo :</font></label>
+                                            <label><font color="DarkSlateGrey">Serie Antiguo :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-<<<<<<< HEAD
-                                            <label><font color="black">Marca Nueva :</font></label>
+                                            <label><font color="DarkSlateGrey">Marca Nueva :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Modelo Nuevo :</font></label>
+                                            <label><font color="DarkSlateGrey">Modelo Nuevo :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Serie Nueva :</font></label>
+                                            <label><font color="DarkSlateGrey">Serie Nueva :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
@@ -401,51 +407,41 @@
 
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <label><font color="black">Mueble Nuevo :</font></label>
+                                            <label><font color="DarkSlateGrey">Mueble Nuevo :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-3">
-                                            <label><font color="black">Denominaciones Nuevo :</font></label>
+                                            <label><font color="DarkSlateGrey">Denominaciones Nuevo :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
                                     <br>
+									<h5><font color="Indigo"><u>DATOS DE CONFIGURACIÓN</u></font></h5>
 
                                     <div class="row">
 
                                         <div class="col-md-2">
-                                            <label><font color="black">Ip Local ATM :</font></label>
+                                            <label><font color="Indigo">Ip Local ATM :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Máscara :</font></label>
+                                            <label><font color="Indigo">Máscara :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">IP GW :</font></label>
+                                            <label><font color="Indigo">IP GW :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">IP Tandem :</font></label>
+                                            <label><font color="Indigo">IP Tandem :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">Puerto :</font></label>
+                                            <label><font color="Indigo">Puerto :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                         <div class="col-md-2">
-                                            <label><font color="black">IP local Alarmas :</font></label>
-=======
-                                            <label><font color="black">Marca Antigua :</font></label>
-                                            <input class="form-control" type="text" placeholder="Automatico">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <label><font color="black">Modelo Antiguo :</font></label>
-                                            <input class="form-control" type="text" placeholder="Automatico">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <label><font color="black">Serie Antiguo :</font></label>
->>>>>>> origin/master
+                                            <label><font color="Indigo">IP local Alarmas :</font></label>
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
@@ -454,7 +450,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <label>Descripción :</label>
+                                            <label><h5><font color="BLACK"><u>DESCRIPCION GENERAL</u></font></h5></label>
                                             <textarea class="form-control" rows="5" placeholder="Ingrese la Descripción aqui."></textarea>
                                         </div>
                                     </div>
