@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-      <head>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>InventariAPP | Principal</title>
@@ -33,8 +33,8 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-		
-		<link rel="icon" href="../imagenes/icon.png">
+
+        <link rel="icon" href="../imagenes/icon.png">
         <link rel="shortcut icon" href="../imagenes/icon.png">
 
         <!-- Marcador en escritorio de Iphone-->
@@ -158,7 +158,7 @@
                 </nav>
             </header>
 
-             <aside class="main-sidebar">
+            <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -201,7 +201,7 @@
                                 <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ATM</a></li>
                             </ul>
                         </li>
-                           <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
+                        <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
                             <a href="#">
                                 <i class="fa fa fa-signal"></i> <span>Reportes</span>
                                 <span class="pull-right-container">
@@ -210,7 +210,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active"><a href="requerimientos.html"><i class="fa fa-bar-chart"></i>Report_barra</a></li>
-                                 <li class="active"><a href="requerimientos.html"><i class="fa fa-pie-chart"></i>Report_char</a></li>
+                                <li class="active"><a href="requerimientos.html"><i class="fa fa-pie-chart"></i>Report_char</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -226,7 +226,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                   <h1><i class='fa fa-edit'></i> Agregar nuevo producto</h1>
+                    <h1><i class='fa fa-edit'></i> Agregar nuevo producto</h1>
                 </section>
 
                 <!-- Main content -->
@@ -234,305 +234,304 @@
                     <div class="row">
                         <div class="col-md-3">
                             <!-- Profile Image -->
-          <div class="box box-primary">
-            <div class="box-body box-profile">
-			<div id="load_img">
-              <img class=" img-responsive" src="../imagenes/add_atm.png" alt="Bussines profile picture">
-			  </div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box image -->
+                            <div class="box box-primary">
+                                <div class="box-body box-profile">
+                                    <div id="load_img">
+                                        <img class=" img-responsive" src="../imagenes/add_atm.png" alt="Bussines profile picture">
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box image -->
                         </div>
                         <!-- /.col -->
-                    
-				<div class="col-md-9">
-		<form name="update_register" id="update_register" class="form-horizontal" method="post" enctype="multipart/form-data">
-		
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#details" data-toggle="tab" aria-expanded="false">General</a></li>
-              <li class=""><a href="#address" data-toggle="tab" aria-expanded="false">Precios</a></li>
-			  
-            </ul>
-            <div class="tab-content">
-              <div id="resultados_ajax"></div>
-           
-             
 
-              <div class="tab-pane active" id="details">
-                
-                  <div class="form-group ">
-                    <label for="product_code" class="col-sm-2 control-label">PSE</label>
+                        <div class="col-md-9">
+                            <form name="update_register" id="update_register" class="form-horizontal" method="post" enctype="multipart/form-data">
 
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="product_code" name="product_code"  required>
-					   <input type="hidden"  id="product_id" name="product_id"  value="52" >
-                    </div>
-                  </div>
-				  <div class="form-group">
-                    <label for="model" class="col-sm-2 control-label">Descripción</label>
+                                <div class="nav-tabs-custom">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#details" data-toggle="tab" aria-expanded="false">General</a></li>
+                                        <li class=""><a href="#address" data-toggle="tab" aria-expanded="false">Precios</a></li>
 
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="model" name="model" >
-                    </div>
-                  </div>
-				  <div class="form-group">
-                    <label for="product_name" class="col-sm-2 control-label">Marca</label>
-
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="product_name" name="product_name" required >
-                    </div>
-                  </div>
-                  
-                    <div class="form-group">
-                    <label for="product_name" class="col-sm-2 control-label">Modelo</label>
-
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="product_name" name="product_name" required >
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="product_name" class="col-sm-2 control-label">Serie</label>
-
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="product_name" name="product_name" required >
-                    </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="product_name" class="col-sm-2 control-label">Dirección</label>
-
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" id="product_name" name="product_name" required >
-                    </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="note" class="col-sm-2 control-label">Observaciones</label>
-                    <div class="col-sm-6">
-						<textarea class="form-control" name="note" id="note"></textarea>
-                    </div>
-                  </div>
-
-				  <div class="form-group">
-                    <label for="manufacturer_id" class="col-sm-2 control-label">Tipo</label>
-
-                    <div class="col-sm-6">
-                      <select class="form-control select2">
-						
-													<option value="1">ATM</option>
-														<option value="3">KIO</option>
-														<option value="2">MON</option>
-														<option value="4">PLUS</option>
-												  </select>
-                    </div>
-                  </div>
-				
-                    
-					<div class="form-group">
-					<label for="status" class="col-sm-2 control-label">Estado</label>
-                    <div class="col-sm-6">
-                      
-                    <select class="form-control select2">
-                    <option value="1">Producción</option>
-					<option value="2">Usado</option>
-					<option value="3">Nuevo</option>
-					<option value="4">Inutilizable</option>
-					<option value="5">Baja</option>
-                    </select>
-                    </div>
-						
-						
-                    </div>
-                
-
-                  <div class="form-group">
-                    <label for="image" class="col-sm-2 control-label">Imagen</label>
-
-                    <div class="col-sm-6">
-                      <input type="file" name="imagefile" id="imagefile" onchange="upload_image(52);">
-                    </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-6">
-                      <button type="submit" class="btn btn-primary actualizar_datos">Guardar datos</button>
-                    </div>
-                  </div>
-               
-              </div>
-              <!-- /.tab-pane -->
-			   <div class="tab-pane" id="address">
-              
-                  <div class="form-group">
-                    <label for="buying_price" class="col-sm-2 control-label">Precio de compra</label>
-
-                    <div class="col-sm-6">
-						<div class="input-group">
-						  <div class="input-group-addon">
-							<i class="fa fa-usd"></i>
-						  </div>
-						  <input type="text" class="form-control" id="buying_price" name="buying_price" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
-						</div>
-                    </div>
-                  </div>
-				  <div class="form-group">
-                    <label for="selling_price" class="col-sm-2 control-label">Precio de venta</label>
-
-                    <div class="col-sm-6">
-						<div class="input-group">
-						  <div class="input-group-addon">
-							<i class="fa fa-usd"></i>
-						  </div>
-						  <input type="text" class="form-control" id="selling_price" name="selling_price" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
-						</div>
-                    </div>
-                  </div>
-                 
-                  
-                  
-				  
-				  
-                  
-                  
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-6">
-                      <button type="submit" class="btn btn-primary actualizar_datos">Guardar datos</button>
-                    </div>
-                  </div>
-               
-              </div>
-              <!-- /.tab-pane -->
-            </div>
-            <!-- /.tab-content -->
-          </div>
-          <!-- /.nav-tabs-custom -->
-		  </form>
-        </div>
-        <!-- /.col -->
-      </div>	
-					
-					
-					
-					
-					
-					</div>
-                    <!-- /.row -->
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="resultados_ajax"></div>
 
 
-                </section>
-                <!-- /.content -->
+
+                                        <div class="tab-pane active" id="details">
+
+                                            <div class="form-group ">
+                                                <label for="product_code" class="col-sm-2 control-label">PSE</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="product_code" name="product_code"  required>
+                                                    <input type="hidden"  id="product_id" name="product_id"  value="52" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="model" class="col-sm-2 control-label">Descripción</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="model" name="model" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_name" class="col-sm-2 control-label">Marca</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="product_name" name="product_name" required >
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="product_name" class="col-sm-2 control-label">Modelo</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="product_name" name="product_name" required >
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_name" class="col-sm-2 control-label">Serie</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="product_name" name="product_name" required >
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="product_name" class="col-sm-2 control-label">Dirección</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="product_name" name="product_name" required >
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="note" class="col-sm-2 control-label">Observaciones</label>
+                                                <div class="col-sm-6">
+                                                    <textarea class="form-control" name="note" id="note"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="manufacturer_id" class="col-sm-2 control-label">Tipo</label>
+
+                                                <div class="col-sm-5">
+                                                    <select class="form-control select2">
+                                                        <option value="1">ATM</option>
+                                                        <option value="3">KIO</option>
+                                                        <option value="2">MON</option>
+                                                        <option value="4">PLUS</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="status" class="col-sm-2 control-label">Estado</label>
+                                                <div class="col-sm-5">
+
+                                                    <select class="form-control select2">
+                                                        <option value="1">Producción</option>
+                                                        <option value="2">Usado</option>
+                                                        <option value="3">Nuevo</option>
+                                                        <option value="4">Inutilizable</option>
+                                                        <option value="5">Baja</option>
+                                                    </select>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="image" class="col-sm-2 control-label">Imagen</label>
+
+                                                <div class="col-sm-6">
+                                                    <input type="file" name="imagefile" id="imagefile" onchange="upload_image(52);">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-6">
+                                                    <button type="submit" class="btn btn-primary actualizar_datos">Guardar datos</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane" id="address">
+
+                                            <div class="form-group">
+                                                <label for="buying_price" class="col-sm-2 control-label">Precio de compra</label>
+
+                                                <div class="col-sm-6">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-usd"></i>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="buying_price" name="buying_price" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="selling_price" class="col-sm-2 control-label">Precio de venta</label>
+
+                                                <div class="col-sm-6">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-usd"></i>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="selling_price" name="selling_price" required pattern="\d+(\.\d{2})?" title="precio con 2 decimales">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-6">
+                                                    <button type="submit" class="btn btn-primary actualizar_datos">Guardar datos</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                    </div>
+                                    <!-- /.tab-content -->
+                                </div>
+                                <!-- /.nav-tabs-custom -->
+                            </form>
+                        </div>
+                        <!-- /.col -->
+                    </div>	
+
+
+
+
 
             </div>
-            <!-- FIN CONTENIDO -->
+            <!-- /.row -->
 
-            <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    <b>Version</b> 1.0
-                </div>
-                <strong>Copyright &copy; 2017-2018 <a href="https://gs4y.tk">GreatSolutions</a>.</strong> Todos los Derechos Reservados.
-            </footer>
 
+        </section>
+        <!-- /.content -->
+
+    </div>
+    <!-- FIN CONTENIDO -->
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 1.0
         </div>
-        <!-- ./wrapper -->
+        <strong>Copyright &copy; 2017-2018 <a href="https://gs4y.tk">GreatSolutions</a>.</strong> Todos los Derechos Reservados.
+    </footer>
 
-        <!-- jQuery 2.2.3 -->
-        <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
-        <!-- Bootstrap 3.3.6 -->
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <!-- Select2 -->
-        <script src="../plugins/select2/select2.full.min.js"></script>
-        <!-- InputMask -->
-        <script src="../plugins/input-mask/jquery.inputmask.js"></script>
-        <script src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-        <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
-        <!-- date-range-picker -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-        <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-        <!-- bootstrap datepicker -->
-        <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
-        <!-- bootstrap color picker -->
-        <script src="../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-        <!-- bootstrap time picker -->
-        <script src="../plugins/timepicker/bootstrap-timepicker.min.js"></script>
-        <!-- SlimScroll 1.3.0 -->
-        <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-        <!-- iCheck 1.0.1 -->
-        <script src="../plugins/iCheck/icheck.min.js"></script>
-        <!-- FastClick -->
-        <script src="../plugins/fastclick/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="../dist/js/app.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="../dist/js/demo.js"></script>
-        <!-- Page script -->
-        <script>
-            $(function() {
-                //Initialize Select2 Elements
-                $(".select2").select2();
+</div>
+<!-- ./wrapper -->
 
-                //Datemask dd/mm/yyyy
-                $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-                //Datemask2 mm/dd/yyyy
-                $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-                //Money Euro
-                $("[data-mask]").inputmask();
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../plugins/select2/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="../plugins/input-mask/jquery.inputmask.js"></script>
+<script src="../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<script src="../plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<!-- SlimScroll 1.3.0 -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="../plugins/iCheck/icheck.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page script -->
+<script>
+                                                        $(function() {
+                                                            //Initialize Select2 Elements
+                                                            $(".select2").select2();
 
-                //Date range picker
-                $('#reservation').daterangepicker();
-                //Date range picker with time picker
-                $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
-                //Date range as a button
-                $('#daterange-btn').daterangepicker(
-                        {
-                            ranges: {
-                                'Today': [moment(), moment()],
-                                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                            },
-                            startDate: moment().subtract(29, 'days'),
-                            endDate: moment()
-                        },
-                function(start, end) {
-                    $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                }
-                );
+                                                            //Datemask dd/mm/yyyy
+                                                            $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+                                                            //Datemask2 mm/dd/yyyy
+                                                            $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+                                                            //Money Euro
+                                                            $("[data-mask]").inputmask();
 
-                //Date picker
-                $('#datepicker').datepicker({
-                    autoclose: true
-                });
+                                                            //Date range picker
+                                                            $('#reservation').daterangepicker();
+                                                            //Date range picker with time picker
+                                                            $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+                                                            //Date range as a button
+                                                            $('#daterange-btn').daterangepicker(
+                                                                    {
+                                                                        ranges: {
+                                                                            'Today': [moment(), moment()],
+                                                                            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                                                            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                                                            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                                            'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                                            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                                                        },
+                                                                        startDate: moment().subtract(29, 'days'),
+                                                                        endDate: moment()
+                                                                    },
+                                                            function(start, end) {
+                                                                $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                                            }
+                                                            );
 
-                //iCheck for checkbox and radio inputs
-                $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                    checkboxClass: 'icheckbox_minimal-blue',
-                    radioClass: 'iradio_minimal-blue'
-                });
-                //Red color scheme for iCheck
-                $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                    checkboxClass: 'icheckbox_minimal-red',
-                    radioClass: 'iradio_minimal-red'
-                });
-                //Flat red color scheme for iCheck
-                $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                    checkboxClass: 'icheckbox_flat-green',
-                    radioClass: 'iradio_flat-green'
-                });
+                                                            //Date picker
+                                                            $('#datepicker').datepicker({
+                                                                autoclose: true
+                                                            });
 
-                //Colorpicker
-                $(".my-colorpicker1").colorpicker();
-                //color picker with addon
-                $(".my-colorpicker2").colorpicker();
+                                                            //iCheck for checkbox and radio inputs
+                                                            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                                                                checkboxClass: 'icheckbox_minimal-blue',
+                                                                radioClass: 'iradio_minimal-blue'
+                                                            });
+                                                            //Red color scheme for iCheck
+                                                            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                                                                checkboxClass: 'icheckbox_minimal-red',
+                                                                radioClass: 'iradio_minimal-red'
+                                                            });
+                                                            //Flat red color scheme for iCheck
+                                                            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                                                                checkboxClass: 'icheckbox_flat-green',
+                                                                radioClass: 'iradio_flat-green'
+                                                            });
 
-                //Timepicker
-                $(".timepicker").timepicker({
-                    showInputs: false
-                });
-            });
-        </script>
-    </body>
+                                                            //Colorpicker
+                                                            $(".my-colorpicker1").colorpicker();
+                                                            //color picker with addon
+                                                            $(".my-colorpicker2").colorpicker();
+
+                                                            //Timepicker
+                                                            $(".timepicker").timepicker({
+                                                                showInputs: false
+                                                            });
+                                                        });
+</script>
+</body>
 </html>
