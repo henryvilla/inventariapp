@@ -33,9 +33,14 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-        <script src="../plugins/chartjs/Chart.min.js"></script>
-    </head>
 
+        <link rel="icon" href="../imagenes/icon.png">
+        <link rel="shortcut icon" href="../imagenes/icon.png">
+
+        <!-- Marcador en escritorio de Iphone-->
+        <link rel="apple-touch-icon" href="../imagenes/icon.png">
+
+    </head>
 
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper"> 
@@ -155,7 +160,7 @@
             </header>
 
             <!-- Left side column. contains the logo and sidebar -->
-           <aside class="main-sidebar">
+            <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -223,7 +228,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1 class="box-title"><i class='fa fa-edit'><u> Reportes Inventario</u></i></h1>
+                    <h1 class="box-title"><i class='fa fa-edit'><u> Listado Requerimiento</u></i></h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
                         <li class="active">Requerimientos</li>
@@ -232,124 +237,188 @@
 
                 <section class="content-header">
 
+                    <br>
                     <div class="row">
-
                         <div class="col-md-3">
+                            <div class="form-group">
+                                <label><font color="blue">Id_Requerimiento :</font></label>
+                                <input class="form-control" type="text" placeholder="Automatico">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Tipo Producto :</font></label>
+                            <select class="form-control select2"  data-placeholder="Seleccione" style="width: 100%;">
+                                <option>ATM</option>
+                                <option>KIO</option>
+                                <option>MON</option>
+                                <option>PLUS</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Tipo de Requerimiento :</font></label>
+                            <select class="form-control select2"  style="width: 100%;">
+                                <option value="" disabled selected>Seleccione el Requerimiento</option>
+                                <option>Nueva Instalación</option>
+                                <option>Recambio</option>
+                                <option>Retiro temporal</option>
+                                <option>Retiro definitivo</option>
+                                <option>Reubicacion</option>
+                                <option>Migración</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Status del Requerimiento :</font></label>
+                            <select class="form-control select2"  style="width: 100%;">
+                                <option value="" disabled selected>Seleccione el Estado</option>
+                                <option>No Iniciado</option>
+                                <option>No Aplica</option>
+                                <option>En Proceso</option>
+                                <option>Finalizado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label><font color="blue">Proyecto :</font></label>
+                                <select class="form-control select2"  data-placeholder="Seleccione" style="width: 100%;">
+                                    <option>UltraBerlin</option>
+                                    <option>Vegetativo</option>
+                                    <option>Tiendas</option>
+                                    <option>Otros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Grupo :</font></label>
+                            <input class="form-control" type="text" placeholder="Automatico">
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Periodo :</font></label>
+                            <input class="form-control" type="text" placeholder="Periodo">
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Proveedor :</font></label>
+                            <select class="form-control select2"  style="width: 100%;">
+                                <option value="" disabled selected>Seleccione</option>
+                                <option>Cosesa</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label><font color="blue">Departamento :</font></label>
+                                <input class="form-control" type="text" placeholder="Departamento">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Provincia :</font></label>
+                            <input class="form-control" type="text" placeholder="Provincia">
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Distrito :</font></label>
+                            <input class="form-control" type="text" placeholder="Distrito">
+                        </div>
+                        <div class="col-md-3">
+                            <label><font color="blue">Locación :</font></label>
+                            <input class="form-control" type="text" placeholder="Locación">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label><font color="blue">Intervalo fecha Solicitud :</font></label>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" value="01/01/2017 - 01/12/2017" id="range" readonly="">
+                                <input type="text" class="form-control pull-right" value="01/04/2017 - 04/04/2017" id="range" readonly="">
                             </div><!-- /input-group -->
                         </div>
 
                         <div class="col-md-3">
-                            <select class="form-control select2" style="width: 100%;">
-                                <option value="">Seleccionar Filtro</option>
-                                <option value="1">Departamento</option>	
-                                <option value="2">Marca</option>	
-                                <option value="3">Modelo</option>	
-                                <option value="4">Locación</option>	
-                                <option value="5">Tipo</option>
-                                <option value="6">Estado</option>
-                            </select>	
-                        </div>  
-
-                        <div class="col-md-3">
-                            <select class="form-control select2" style="width: 100%;">
-                                <option value="">Seleccionar Filtro</option>
-                                <option value="1">Producción</option>	
-                                <option value="2">Usado</option>	
-                                <option value="3">Nuevo</option>	
-                                <option value="4">Inutilizable</option>	
-                                <option value="5">Baja</option>
-                            </select>	
-                        </div> 
-
-                          <div class="col-md-3">                  
+                            <label><font color="blue"></font></label>
                             <span class="input-group-btn">
                                 <button class="btn btn-block btn-primary" type="button" onclick="load(1);">Consultar <i class="fa fa-search"></i></button>
                             </span>
                         </div>
 
-                    </div><!--fin 3ra fila -->
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="box" >
-                                <div class="box-header with-border">
-                                    <center> <font face="Arial" size="5" >  <b>Reporte de ATM'S en Producción </b></font> </center>
-                                </div>
-                                <div class="box-body">
-
-                                    <div class="chart">
-                                        <canvas id="barChart" style="height: 200px; width: 500px;" width="618" height="250"></canvas>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
                     </div>
-                    <br>
-                     <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control pull-right" value="01/01/2017 - 01/12/2017" id="range" readonly="">
-                            </div><!-- /input-group -->
-                        </div>
-
-                        <div class="col-md-3">
-                            <select class="form-control select2" style="width: 100%;">
-                                <option value="">Seleccionar Filtro</option>
-                                <option value="1">Departamento</option>	
-                                <option value="2">Marca</option>	
-                                <option value="3">Modelo</option>	
-                                <option value="4">Locación</option>	
-                                <option value="5">Tipo</option>
-                                <option value="6">Estado</option>
-                            </select>	
-                        </div>  
-
-
-                         <div class="col-md-3">                  
-                            <span class="input-group-btn">
-                                <button class="btn btn-block btn-primary" type="button" onclick="load(1);">Consultar <i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-
-                    </div>
-                    <br>
-
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="box" >
-                                <div class="box-header with-border">
-                                    <center> <font face="Arial" size="5" >  <b>Reporte de ATM'S en Pastel </b></font> </center>
-                                </div>
-                                <div class="box-body">
-                                     <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                   
-
-
-
-                    <!--fin de la 1era seccion -->
                 </section>
-                <!-- Main content -->
+
+                <!-- Main con   tent -->
                 <!--tabla producots-->
+                <section class="content">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box" >
+
+                                <div class="box-header with-border">
+                                    <div class="row">
+                                        <div class="col-md-6"></div>
+                                        <div class="col-md-3">
+                                            <a class="share-pdf" onclick="popUp = window.open('https://plus.google.com/share?url=http://www.iloveimg.com/es/redimensionar-imagen', 'popupwindow', 'scrollbars=yes,width=700,height=400');
+                                                    popUp.focus();
+                                                    return false;">
+                                                <i class="fa fa-file-pdf-o"></i>   Descargar como PDF</a>
+                                        </div>
+                                        <div class="col-md-3">           
+                                            <a class="share-xls" onclick="popUp = window.open('http://www.linkedin.com/shareArticle?url=http://www.iloveimg.com/es/redimensionar-imagen', 'popupwindow', 'scrollbars=yes,width=700,height=400');
+                                                    popUp.focus();
+                                                    return false;">
+                                                <i class="fa fa-file-excel-o"></i>   Descargar como Excel</a>
+                                        </div>
+                                    </div>
+                                    <h3 class="box-title">Listado de Requerimientos</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-condensed table-hover table-striped ">
+                                            <tbody><tr>
+                                                    <th class="text-center">Id_Requerimiento</th>
+                                                    <th class="text-center">Tipo_Requerimiento</th>
+                                                    <th>Tipo_Producto </th>
+                                                    <th>Status</th>
+                                                    <th>Proyecto</th>
+                                                    <th>Grupo</th>
+                                                    <th>Fecha Solicitud</th>
+                                                    <th>Detalle</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">CE001894</td>
+                                                    <td class="text-cente">Nueva Instalación</td>
+                                                    <td class="text-left">ATM</td>
+                                                    <td>En proceso</td>
+                                                    <td>UltraBerlín</td>
+                                                    <td class="text-left">Optimización</td>
+                                                    <td class="text-left">26/08/2016</td>
+                                                    <td class="text-left"> <button type="button" class="btn btn-block btn-info">Detalle</button></td>       
+                                                </tr>
+
+                                            </tbody></table>
+                                    </div><!--fin_tabla-->
+                                </div><!--fin_class_body-->
+
+                                <div class="box-footer clearfix">
+                                    Mostrando 1 al 10 de 10 registros<ul class="pagination pagination-sm no-margin pull-right"><li class="disabled"><span><a>‹ Anterior</a></span></li><li class="active"><a>1</a></li><li class="disabled"><span><a>Siguiente ›</a></span></li></ul>
+                                </div>
+                            </div><!-- finclass_box-->
+
+                        </div><!-- /.col -->
+
+                    </div><!-- /.row -->
+
+                </section>
+                <!-- /.content -->
+
             </div>
+
+
+
+
+
+
             <!-- FIN CONTENIDO -->
 
             <footer class="main-footer">
@@ -365,50 +434,6 @@
 
         <!-- ./wrapper -->
 
-
-
-        <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
-        <script type="text/javascript">
-                                    window.onload = function() {
-                                        var chart = new CanvasJS.Chart("chartContainer",
-                                                {
-                                                    title: {
-                                                      
-                                                        fontSize: 30,
-                                                        fontFamily: "Arial"
-                                                    },
-                                                    animationEnabled: true,
-                                                    legend: {
-                                                        verticalAlign: "center",
-                                                        horizontalAlign: "left",
-                                                        fontSize: 20,
-                                                        fontFamily: "Helvetica"
-                                                    },
-                                                    theme: "theme2",
-                                                    data: [
-                                                        {
-                                                            type: "pie",
-                                                            indexLabelFontFamily: "Garamond",
-                                                            indexLabelFontSize: 20,
-                                                            indexLabel: "{label} {y}%",
-                                                            startAngle: -20,
-                                                            showInLegend: true,
-                                                            toolTipContent: "{legendText} {y}%",
-                                                            dataPoints: [
-                                                                {y: 83.24, legendText: "Producción", label: "Producción"},
-                                                                {y: 8.16, legendText: "Nuevo", label: "Nuevo"},
-                                                                {y: 4.67, legendText: "Usado", label: "Usado"},
-                                                                {y: 1.67, legendText: "Inutilizable", label: "Inutilizable"},
-                                                                {y: 0.98, legendText: "Baja", label: "Baja"}
-                                                            ]
-                                                        }
-                                                    ]
-                                                });
-                                        chart.render();
-
-                                    }
-        </script>
-        <script src="../plugins/chartjs/Chart.min.js"></script>
         <!-- jQuery 2.2.3 -->
         <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
         <!-- Bootstrap 3.3.6 -->
@@ -440,140 +465,71 @@
         <script src="../dist/js/demo.js"></script>
         <!-- Page script -->
         <script>
-                                    $(function() {
-                                        //Initialize Select2 Elements
-                                        $(".select2").select2();
+                                                $(function() {
+                                                    //Initialize Select2 Elements
+                                                    $(".select2").select2();
 
-                                        //Datemask dd/mm/yyyy
-                                        $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
-                                        //Datemask2 mm/dd/yyyy
-                                        $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
-                                        //Money Euro
-                                        $("[data-mask]").inputmask();
+                                                    //Datemask dd/mm/yyyy
+                                                    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+                                                    //Datemask2 mm/dd/yyyy
+                                                    $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+                                                    //Money Euro
+                                                    $("[data-mask]").inputmask();
 
-                                        //Date range picker
-                                        $('#reservation').daterangepicker();
-                                        //Date range picker with time picker
-                                        $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
-                                        //Date range as a button
-                                        $('#daterange-btn').daterangepicker(
-                                                {
-                                                    ranges: {
-                                                        'Today': [moment(), moment()],
-                                                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                                                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                                                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                                                        'This Month': [moment().startOf('month'), moment().endOf('month')],
-                                                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                                                    },
-                                                    startDate: moment().subtract(29, 'days'),
-                                                    endDate: moment()
-                                                },
-                                        function(start, end) {
-                                            $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                                        }
-                                        );
+                                                    //Date range picker
+                                                    $('#reservation').daterangepicker();
+                                                    //Date range picker with time picker
+                                                    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+                                                    //Date range as a button
+                                                    $('#daterange-btn').daterangepicker(
+                                                            {
+                                                                ranges: {
+                                                                    'Today': [moment(), moment()],
+                                                                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                                                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                                                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                                                },
+                                                                startDate: moment().subtract(29, 'days'),
+                                                                endDate: moment()
+                                                            },
+                                                    function(start, end) {
+                                                        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                                    }
+                                                    );
 
-                                        //Date picker
-                                        $('#datepicker').datepicker({
-                                            autoclose: true
-                                        });
+                                                    //Date picker
+                                                    $('#datepicker').datepicker({
+                                                        autoclose: true
+                                                    });
 
-                                        //iCheck for checkbox and radio inputs
-                                        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                                            checkboxClass: 'icheckbox_minimal-blue',
-                                            radioClass: 'iradio_minimal-blue'
-                                        });
-                                        //Red color scheme for iCheck
-                                        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                                            checkboxClass: 'icheckbox_minimal-red',
-                                            radioClass: 'iradio_minimal-red'
-                                        });
-                                        //Flat red color scheme for iCheck
-                                        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                                            checkboxClass: 'icheckbox_flat-green',
-                                            radioClass: 'iradio_flat-green'
-                                        });
+                                                    //iCheck for checkbox and radio inputs
+                                                    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                                                        checkboxClass: 'icheckbox_minimal-blue',
+                                                        radioClass: 'iradio_minimal-blue'
+                                                    });
+                                                    //Red color scheme for iCheck
+                                                    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                                                        checkboxClass: 'icheckbox_minimal-red',
+                                                        radioClass: 'iradio_minimal-red'
+                                                    });
+                                                    //Flat red color scheme for iCheck
+                                                    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                                                        checkboxClass: 'icheckbox_flat-green',
+                                                        radioClass: 'iradio_flat-green'
+                                                    });
 
-                                        //Colorpicker
-                                        $(".my-colorpicker1").colorpicker();
-                                        //color picker with addon
-                                        $(".my-colorpicker2").colorpicker();
+                                                    //Colorpicker
+                                                    $(".my-colorpicker1").colorpicker();
+                                                    //color picker with addon
+                                                    $(".my-colorpicker2").colorpicker();
 
-                                        //Timepicker
-                                        $(".timepicker").timepicker({
-                                            showInputs: false
-                                        });
-                                    });
+                                                    //Timepicker
+                                                    $(".timepicker").timepicker({
+                                                        showInputs: false
+                                                    });
+                                                });
         </script>
-
-
-        <script>
-            $(function() {
-                /* ChartJS
-                 * -------
-                 * Here we will create a few charts using ChartJS
-                 */
-
-                //--------------
-                //- AREA CHART -
-                //--------------
-                var areaChartData = {
-                    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-                    datasets: [
-                        {
-                            label: "Produccion",
-                            fillColor: "rgba(210, 214, 222, 1)",
-                            strokeColor: "rgba(210, 214, 222, 1)",
-                            pointColor: "rgba(210, 214, 222, 1)",
-                            pointStrokeColor: "#c1c7d1",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(220,220,220,1)",
-                            data: [1342, 982, 950, 732, 1132, 1532, 332, 632, 832, 232, 532, 1332]
-                        }
-                    ]
-                };
-                //-------------
-                //- BAR CHART -
-                //-------------
-                var barChartCanvas = $("#barChart").get(0).getContext("2d");
-                var barChart = new Chart(barChartCanvas);
-                var barChartData = areaChartData;
-                barChartData.datasets[0].fillColor = "#00a65a";
-                barChartData.datasets[0].strokeColor = "#00a65a";
-                barChartData.datasets[0].pointColor = "#00a65a";
-                var barChartOptions = {
-                    //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-                    scaleBeginAtZero: true,
-                    //Boolean - Whether grid lines are shown across the chart
-                    scaleShowGridLines: true,
-                    //String - Colour of the grid lines
-                    scaleGridLineColor: "rgba(0,0,0,.05)",
-                    //Number - Width of the grid lines
-                    scaleGridLineWidth: 1,
-                    //Boolean - Whether to show horizontal lines (except X axis)
-                    scaleShowHorizontalLines: true,
-                    //Boolean - Whether to show vertical lines (except Y axis)
-                    scaleShowVerticalLines: true,
-                    //Boolean - If there is a stroke on each bar
-                    barShowStroke: true,
-                    //Number - Pixel width of the bar stroke
-                    barStrokeWidth: 2,
-                    //Number - Spacing between each of the X value sets
-                    barValueSpacing: 20,
-                    //Number - Spacing between data sets within X values
-                    barDatasetSpacing: 2,
-                    //String - A legend template
-                    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-                    //Boolean - whether to make the chart responsive
-                    responsive: true,
-                    maintainAspectRatio: true
-                };
-
-                barChartOptions.datasetFill = false;
-                barChart.Bar(barChartData, barChartOptions);
-            });
-        </script>
-
     </body>
 </html>
