@@ -33,8 +33,8 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-		
-		<link rel="icon" href="../imagenes/icon.png">
+
+        <link rel="icon" href="../imagenes/icon.png">
         <link rel="shortcut icon" href="../imagenes/icon.png">
 
         <!-- Marcador en escritorio de Iphone-->
@@ -185,8 +185,9 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="reportes_req.html"><i class="fa fa-circle-o"></i>Consulta</a></li>
-                                <li class="active"><a href="requerimientos.html"><i class="fa fa-circle-o"></i>Nuevo REQ</a></li>
+                                <li><a href="consulta_requerimientos.html"><i class="fa fa-circle-o"></i>Consulta</a></li>
+                                <li class="active"><a href="nuevo_requerimiento.html"><i class="fa fa-circle-o"></i>Nuevo Req.</a></li>
+                                <li class="active"><a href="reportes_requerimiento.html"><i class="fa fa-bar-chart"></i>Estadisticos</a></li>
                             </ul>
                         </li>
 
@@ -198,22 +199,12 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="reportes_inventario.html"><i class="fa fa-circle-o"></i>Catalogo</a></li>
-                                <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ATM</a></li>
+                                <li><a href="consulta_inventario.html"><i class="fa fa-circle-o"></i>Consulta</a></li>
+                                <li><a href="agregar_atm.html"><i class="fa fa-circle-o"></i>Nuevo ingreso</a></li>
+                                <li class="active"><a href="reportes_inventario.html"><i class="fa fa-bar-chart"></i>Estadisticos</a></li>
                             </ul>
                         </li>
-                           <li class=" treeview"> <!-- si quiero que se active tengo que colocar la clase active class="active treeview" -->
-                            <a href="#">
-                                <i class="fa fa fa-signal"></i> <span>Reportes</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="reportes_inv.html"><i class="fa fa-bar-chart"></i>Report_inventario</a></li>
-                                 <li class="active"><a href="requerimientos.html"><i class="fa fa-pie-chart"></i>Report_req</a></li>
-                            </ul>
-                        </li>
+                      
                     </ul>
 
                 </section>
@@ -244,10 +235,10 @@
                                 </div> 
                                 <!-- /.box-header -->
                                 <div class="box-body">
-								
-									<h5><font color="red"><u>SOBRE EL REQUERIMIENTO</u></font></h5>
+
+                                    <h5><font color="red"><u>SOBRE EL REQUERIMIENTO</u></font></h5>
                                     <div class="row">
-									
+
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label><font color="red">Id_Requerimiento :</font></label>
@@ -276,10 +267,10 @@
                                             </select>
                                         </div>
                                     </div>
-								
+
                                     <br>
-									<h5><font color="blue"><u>RESPONSABILIDAD DEL REQUERIMIENTO</u></font></h5>
-									
+                                    <h5><font color="blue"><u>RESPONSABILIDAD DEL REQUERIMIENTO</u></font></h5>
+
                                     <div class="row">
                                         <div class="col-md-3">
                                             <label><font color="blue">ID_del ATM :  </font></label>
@@ -329,7 +320,7 @@
                                         </div>
                                     </div>
                                     <br>
-									<h5><font color="DarkOliveGreen"><u>SOBRE EL CONTACTO Y EL LUGAR</u></font></h5>
+                                    <h5><font color="DarkOliveGreen"><u>SOBRE EL CONTACTO Y EL LUGAR</u></font></h5>
                                     <div class="row">
                                         <div class="col-md-2">
                                             <label><font color="DarkOliveGreen">Departamento :</font></label>
@@ -374,8 +365,8 @@
                                     </div>
 
                                     <br> 
-									<h5><font color="DarkSlateGrey"><u>DATOS PARA EL REQUERIMIENTO</u></font></h5>
-                                    
+                                    <h5><font color="DarkSlateGrey"><u>DATOS PARA EL REQUERIMIENTO</u></font></h5>
+
                                     <div class="row">
                                         <div class="col-md-2">
                                             <label><font color="DarkSlateGrey">Marca Antigua :</font></label>
@@ -416,7 +407,7 @@
                                         </div>
                                     </div>
                                     <br>
-									<h5><font color="Indigo"><u>DATOS DE CONFIGURACIÓN</u></font></h5>
+                                    <h5><font color="Indigo"><u>DATOS DE CONFIGURACIÓN</u></font></h5>
 
                                     <div class="row">
 
@@ -445,7 +436,26 @@
                                             <input class="form-control" type="text" placeholder="Automatico">
                                         </div>
                                     </div>
+ <br>
+                                    <h5><font color="green"><u>PRECIOS</u></font></h5>
 
+                                    <div class="row">
+
+                                        <div class="col-md-2">
+                                            <label><font color="green">Inversion :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="green">IGV :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label><font color="green">Precio perdido :</font></label>
+                                            <input class="form-control" type="text" placeholder="Automatico">
+                                        </div>
+                                        
+                                    </div>
+                                    
                                     <br>
 
                                     <div class="row">
