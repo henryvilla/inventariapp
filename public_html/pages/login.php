@@ -1,4 +1,58 @@
-<!DOCTYPE html>
+<?php
+require_once 'inventario/db_connect.php';
+
+session_start();
+
+if(isset($_SESSION['id'])) {
+	header('location: agregar_atm.php');	
+}
+
+$errors = array();
+
+if($_POST) {		
+
+	$username = $connect->real_escape_string($_POST['username']); // Escapando caracteres especiales
+	$password = $connect->real_escape_string($_POST['password']);
+    
+    echo $username;
+    echo $password;
+	if(empty($username) || empty($password)) {
+		if($username == "") {
+			$errors[] = "Se requiere nombre de usuario";
+		} 
+
+		if($password == "") {
+			$errors[] = "Se requiere contraseña";
+		}
+	} else {
+		$sql = "SELECT * FROM login WHERE username = '$username'";
+		$result = $connect->query($sql);
+        $rows= $result->num_rows;
+
+		if($rows == 1) {
+			//$password = md5($password);
+			// exists
+			$mainSql = "SELECT * FROM login WHERE username = '$username' AND password = '$password'";
+			$mainResult = $connect->query($mainSql);
+
+			if($mainResult->num_rows == 1) {
+				$value = $mainResult->fetch_assoc();
+				$user_id = $value['id'];
+				// set session
+				$_SESSION['id'] = $user_id;
+				header('location: agregar_atm.php');	
+			} else{
+				
+				$errors[] = "Combinación incorrecta de nombre de usuario y/o contraseña";
+			} // /else
+		} else {		
+			$errors[] = "El nombre de usuario no existe";		
+		} // /else
+	} // /else not empty username // password
+	
+} // /if $_POST
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -55,13 +109,23 @@
                 <div class="login-box-body">
                     <p class="login-box-msg">Bienvenido a InventariAPP <br> Interbank</p>
 
-                    <form action="nuevo_requerimiento.html" method="get">
+<div class="messages">
+							<?php if($errors) {
+								foreach ($errors as $key => $value) {
+									echo '<div class="alert alert-warning" role="alert">
+									<i class="glyphicon glyphicon-exclamation-sign"></i>
+									'.$value.'</div>';										
+									}
+								} ?>
+						</div>
+
+                    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="loginform">
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="usuario">
+                            <input id="username" name="username" type="text" class="form-control" placeholder="usuario">
                             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
-                            <input type="password" class="form-control" placeholder="contraseña">
+                            <input name="password" id="password" type="password" class="form-control" placeholder="contraseña">
                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         </div>
                         <div class="row">

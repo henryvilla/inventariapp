@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <meta http-equiv="Refresh" content="0;url=./pages/login.html">
+        <meta http-equiv="Refresh" content="0;url=./pages/login.php">
     </head>
     <body>
         
